@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="configurationApp">
 <head>
   <meta charset="UTF-8">
   <title>Tenable Test</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body ng-controller="mainController">
 
 <header class="main-header">
   <h1>Configurations</h1>
 </header>
 
-<div id="mainContainer" class="container"></div>
+<div id="mainContainer" class="container">
+  <div class="card" ng-repeat="configuration in configurations">
+    <p ng-bind="configuration.name"></p>
+    <p ng-bind="configuration.hostname"></p>
+    <p ng-bind="configuration.port"></p>
+    <p ng-bind="configuration.username"></p>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
