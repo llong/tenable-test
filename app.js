@@ -3,7 +3,6 @@ xhr.open('GET','data.json', true);
 xhr.send();
 
 xhr.onreadystatechange = processRequest;
-var response = [];
 
 function processRequest(e) {
   if (xhr.readyState === 4 && xhr.status === 200){
@@ -21,10 +20,10 @@ function processRequest(e) {
       }
 
       var values = [
-        cardContent(configurations[i].name),
-        cardContent(configurations[i].hostname),
-        cardContent(configurations[i].port),
-        cardContent(configurations[i].username)
+        cardContent('Name: ' + configurations[i].name),
+        cardContent('Hostname: ' + configurations[i].hostname),
+        cardContent('Port: ' + configurations[i].port),
+        cardContent('Username: ' + configurations[i].username)
       ]
 
       var docFrag = document.createDocumentFragment();
