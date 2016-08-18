@@ -42,6 +42,7 @@ html {
   margin-bottom: .5rem;
 }
 
+/* Display Card full width on mobile devices */
 @media (min-width: 768px) {
   .card {
     display: inline-block;
@@ -59,4 +60,23 @@ html {
 
 .card > P:last-of-type {
   border-bottom: none;
+}
+
+/*Animation*/
+
+.fade.ng-enter {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(-20px);
+  -webkit-transform: translateX(-20px);
+}
+
+.fade.ng-enter-stagger {
+  transition-delay: 0.3s;
+}
+
+.fade.ng-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
 }

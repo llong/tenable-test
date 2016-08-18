@@ -1,4 +1,4 @@
-var app = angular.module('configurationApp',[]);
+var app = angular.module('configurationApp',['ngAnimate']);
 
 app.factory('configurations',['$http', function($http){
   var obj = {};

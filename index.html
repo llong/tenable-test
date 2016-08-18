@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Tenable Test</title>
   <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+  <script src="app.js"></script>
 </head>
 <body ng-controller="mainController">
 
@@ -12,17 +16,15 @@
 </header>
 
 <div id="mainContainer" class="container">
-  <div class="card" ng-repeat="configuration in configurations">
-    <p ng-bind="configuration.name"></p>
-    <p ng-bind="configuration.hostname"></p>
-    <p ng-bind="configuration.port"></p>
-    <p ng-bind="configuration.username"></p>
+  <div class="card fade" ng-repeat="configuration in configurations">
+    <p><strong>Name: </strong>{{configuration.name}} </p>
+    <p><strong>Hostname: </strong>{{configuration.hostname}} </p>
+    <p><strong>Port: </strong>{{configuration.port}} </p>
+    <p><strong>Username: </strong>{{configuration.username}} </p>
   </div>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
-<script src="app.js"></script>
+
 </body>
 </html>
